@@ -24,5 +24,5 @@ RUN ngrok authtoken 2gJOKxrR6ToUmUJmwnHvmUEMI7O_7CaFybHTiRnhKAGU3tERi
 # Expose port 3389 untuk RDP
 EXPOSE 3389
 
-# Start xrdp dan Ngrok untuk forward port 3389
-CMD /etc/init.d/xrdp start && ngrok tcp 3389 && tail -f /dev/null
+# Start xrdp dan Ngrok dengan region Asia
+CMD /etc/init.d/xrdp start && ngrok tcp --region ap 3389 && tail -f /dev/null
